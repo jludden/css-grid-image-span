@@ -1,0 +1,60 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400&display=swap');
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background: #333;
+    color: #fff;
+    font-family: 'Roboto', sans-serif;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 10px;
+}
+
+/* transition out - slow */
+.container > div {
+    height: 210px;
+    background-size: cover;
+    background-attachment: fixed;
+    transition: 10s;
+
+}
+
+/* transition in - fast */
+.container > div:hover {
+    background: url('./img/logan-weaver-BFO4sQakDcM-unsplash.jpg');
+    height: 210px;
+    background-size: cover;
+    background-attachment: fixed;
+
+    opacity: 0.7;
+    transform: scale(0.98);
+    transition: all .1s ease-in;
+
+}
+
+.container > div:nth-of-type(1) {
+    grid-column: 1 / 4;
+}
+
+.container > div:nth-of-type(8) {
+    grid-column: 2 / span 2;
+}
+
+
+.bg1 {
+    background-position: 0, -1200px; 
+    background: url('./img/chris-henry-E77SjOPCE5Y-unsplash.jpg');
+}
+
+.bg2 {
+    background: url('./img/logan-weaver-BFO4sQakDcM-unsplash.jpg');
+}
+
